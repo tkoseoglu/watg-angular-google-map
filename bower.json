@@ -21,7 +21,8 @@
     "tests"
   ],
   "dependencies": {
-    "angular": "^1.5.3"
+    "angular": "^1.5.3",
+    "google-maps-api-addons": "^1.0.0"
   },
   "devDependencies": {
     "bootstrap": "^3.3.6",

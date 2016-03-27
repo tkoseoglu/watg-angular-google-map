@@ -39,7 +39,8 @@ module.exports = function(grunt) {
                     'bower_components/bootstrap/dist/js/bootstrap.js',
                     'bower_components/angular/angular.js',
                     'bower_components/angular-route/angular-route.js',
-                    'bower_components/angular-sanitize/angular-sanitize.js'
+                    'bower_components/angular-sanitize/angular-sanitize.js',
+                    'bower_components/google-maps-api-addons/daynightoverlay/src/daynightoverlay.js'
                 ],
                 dest: 'dev/js/vendor.js'
             },
@@ -49,7 +50,8 @@ module.exports = function(grunt) {
                     'bower_components/bootstrap/dist/js/bootstrap.min.js',
                     'bower_components/angular/angular.min.js',
                     'bower_components/angular-route/angular-route.min.js',
-                    'bower_components/angular-sanitize/angular-sanitize.min.js'
+                    'bower_components/angular-sanitize/angular-sanitize.min.js',
+                     'bower_components/google-maps-api-addons/daynightoverlay/src/daynightoverlay.js'
                 ],
                 dest: 'dev/js/vendor.min.js'
             }
@@ -147,6 +149,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks("grunt-contrib-jshint");
-    grunt.registerTask('dev', ["jshint", 'concat', 'uglify', 'concat_css', 'cssmin', 'copy','connect:dev', 'watch']); //, 'watch'
+    grunt.registerTask('dev', ["jshint", 'concat', 'uglify', 'concat_css', 'cssmin', 'copy', 'connect:dev', 'watch']); //, 'watch'
     grunt.registerTask('dist', ['concat:appDist', 'uglify:appDist', 'concat_css:assetsDist', 'cssmin:assetsDist', 'copy:dist']);
 };
