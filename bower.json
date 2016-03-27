@@ -1,0 +1,31 @@
+{
+  "name": "watg-angular-google-map",
+  "description": "angularjs 1.x custom google map directive",
+  "main": "index.js",
+  "authors": [
+    "tolga koseoglu"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "angularjs",
+    "google",
+    "maps"
+  ],
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.3"
+  },
+  "devDependencies": {
+    "bootstrap": "^3.3.6",
+    "angular-sanitize": "^1.5.3",
+    "angular-route": "^1.5.3"
+  }
+}

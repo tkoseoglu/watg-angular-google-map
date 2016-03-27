@@ -1,0 +1,7 @@
+.ui-autocomplete {
+    z-index: 2147483647;
+}
+
+.ui-autocomplete-loading {
+    background: url('Images/ui-anim_basic_16x16.gif') right center no-repeat !important;
+}
