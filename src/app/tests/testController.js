@@ -39,15 +39,17 @@
 			showMyLocation: false,
 			markers: [{
 					title: "London",
+					subTitle:"Staff: 83",
+					linkContent:"<a href='http://www.google.com'>My Link</a>",
 					lat: 51.507351,
-					lon: -0.127758,
-					staff: 127
+					lon: -0.127758
             },
 				{
 					title: "Singapore",
+					subTitle:"Staff: 123",
+					linkContent:"<a href='http://www.google.com'>My Link</a>",
 					lat: 1.352083,
-					lon: 103.991531,
-					staff: 83
+					lon: 103.991531
             }]
 		};
 	}

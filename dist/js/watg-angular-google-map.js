@@ -10,7 +10,7 @@
     function watgGoogleMapDirective() {
         return {
             restrict: "E",
-            template: "<div id='map' style='height:600px;width:1025px;background-color: #fff'></div>",
+            template: "<div id='map' class='watgAngularGoogleMap'></div>",
             replace: "true",
             scope: {
                 config: "=",
@@ -20,8 +20,8 @@
         };
 
         function link(scope, element) {
-            console.log("Hello...");
             var map;
+            var infowindow;
 
             function handleLocationError(browserHasGeolocation, infoWindow, pos) {
                 infoWindow.setPosition(pos);
@@ -46,8 +46,12 @@
                 //markers
                 if (scope.config.markers.length > 0) {
                     scope.config.markers.forEach(function(m) {
-                        var contentString = '<div id="content">' + '<div id="siteNotice">' + '</div>' + '<h1 id="firstHeading" class="firstHeading">' + m.title + '</h1>' + '<div id="bodyContent">' + '<p><b>Staff:</b>' + m.staff + '</p>' + '<p><a href="my.watg.com/#team?officeName=">Team Members</a></p>' + '</div>';
-                        var infowindow = new google.maps.InfoWindow({
+                        var contentString = '<div id="content">';
+                        contentString += '<h3>' + m.title + '</h3>';
+                        contentString += '<div>' + m.subTitle + '</div>';
+                        contentString += '<div>' + m.linkContent + '</div>';
+                        contentString + '</div>';
+                        infowindow = new google.maps.InfoWindow({
                             content: contentString
                         });
                         var marker = new google.maps.Marker({
@@ -62,23 +66,26 @@
                     });
                 }
                 //show my location
-                if (navigator.geolocation && scope.config.showMyLocation) {
-                    navigator.geolocation.getCurrentPosition(function(position) {
-                        var infoWindow = new google.maps.InfoWindow({ map: map });
-                        var pos = {
-                            lat: position.coords.latitude,
-                            lng: position.coords.longitude
-                        };
-                        infoWindow.setPosition(pos);
-                        infoWindow.setContent('You are here!');
-                        //map.setCenter(pos);
-                    }, function() {
-                        handleLocationError(true, infoWindow, map.getCenter());
-                    });
-                } else {
-                    // Browser doesn't support Geolocation
-                    handleLocationError(false, infoWindow, map.getCenter());
+                if (scope.config.showMyLocation) {
+                    if (navigator.geolocation) {
+                        navigator.geolocation.getCurrentPosition(function(position) {
+                            infoWindow = new google.maps.InfoWindow({ map: map });
+                            var pos = {
+                                lat: position.coords.latitude,
+                                lng: position.coords.longitude
+                            };
+                            infoWindow.setPosition(pos);
+                            infoWindow.setContent('You are here!');
+                            //map.setCenter(pos);
+                        }, function() {
+                            handleLocationError(true, infoWindow, map.getCenter());
+                        });
+                    } else {
+                        // Browser doesn't support Geolocation
+                        handleLocationError(false, infoWindow, map.getCenter());
+                    }
                 }
+                //overlay
                 new DayNightOverlay({
                     map: map
                 });
