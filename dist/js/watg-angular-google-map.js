@@ -54,7 +54,7 @@
                             position: { lat: m.lat, lng: m.lon },
                             map: map,
                             title: m.title,
-                            icon: 'src/assets/images/CustomMarker.png'
+                            icon: scope.config.customMarkerUrl
                         });
                         marker.addListener('click', function() {
                             infowindow.open(map, marker);
