@@ -35,6 +35,8 @@
 			lon: 10,
 			zoom: 2,
 			customMapTypes: [watg1teamhome],
+			customMarkerUrl: "src/assets/images/CustomMarker.png",
+			showMyLocation: false,
 			markers: [{
 					title: "London",
 					lat: 51.507351,
