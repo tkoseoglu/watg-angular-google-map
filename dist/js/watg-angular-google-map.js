@@ -71,13 +71,14 @@
                     //markers
                     console.log("config.markers collection changed...");
                     if (scope.config.markers.length > 0) {
+                        console.log(newValue);
                         scope.config.markers.forEach(function(m) {
                             var contentString = '<div id="content">';
                             contentString += '<h3>' + m.title + '</h3>';
                             contentString += '<div>' + m.subTitle + '</div>';
                             contentString += '<div>' + m.linkContent + '</div>';
                             contentString + '</div>';
-                            infowindow = new google.maps.InfoWindow({
+                            var markerInfowindow = new google.maps.InfoWindow({
                                 content: contentString
                             });
                             var marker = new google.maps.Marker({
@@ -87,7 +88,7 @@
                                 icon: scope.config.customMarkerUrl
                             });
                             marker.addListener('click', function() {
-                                infowindow.open(map, marker);
+                                markerInfowindow.open(map, marker);
                             });
                         });
                     }
