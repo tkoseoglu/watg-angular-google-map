@@ -43,28 +43,6 @@
                     map.mapTypes.set(scope.selectedMapTypeId, scope.config.customMapTypes[0]);
                     map.setMapTypeId(scope.selectedMapTypeId);
                 }
-                //markers
-                if (scope.config.markers.length > 0) {
-                    scope.config.markers.forEach(function(m) {
-                        var contentString = '<div id="content">';
-                        contentString += '<h3>' + m.title + '</h3>';
-                        contentString += '<div>' + m.subTitle + '</div>';
-                        contentString += '<div>' + m.linkContent + '</div>';
-                        contentString + '</div>';
-                        infowindow = new google.maps.InfoWindow({
-                            content: contentString
-                        });
-                        var marker = new google.maps.Marker({
-                            position: { lat: m.lat, lng: m.lon },
-                            map: map,
-                            title: m.title,
-                            icon: scope.config.customMarkerUrl
-                        });
-                        marker.addListener('click', function() {
-                            infowindow.open(map, marker);
-                        });
-                    });
-                }
                 //show my location
                 if (scope.config.showMyLocation) {
                     if (navigator.geolocation) {
@@ -88,6 +66,31 @@
                 //overlay
                 new DayNightOverlay({
                     map: map
+                });
+                scope.$watchCollection('config.markers', function(newValue, oldValue) {
+                    //markers
+                    console.log("config.markers collection changed...");
+                    if (scope.config.markers.length > 0) {
+                        scope.config.markers.forEach(function(m) {
+                            var contentString = '<div id="content">';
+                            contentString += '<h3>' + m.title + '</h3>';
+                            contentString += '<div>' + m.subTitle + '</div>';
+                            contentString += '<div>' + m.linkContent + '</div>';
+                            contentString + '</div>';
+                            infowindow = new google.maps.InfoWindow({
+                                content: contentString
+                            });
+                            var marker = new google.maps.Marker({
+                                position: { lat: m.lat, lng: m.lon },
+                                map: map,
+                                title: m.title,
+                                icon: scope.config.customMarkerUrl
+                            });
+                            marker.addListener('click', function() {
+                                infowindow.open(map, marker);
+                            });
+                        });
+                    }
                 });
             }
             initMap();

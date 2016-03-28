@@ -375,6 +375,30 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "src/app/directives/watgGoogleMapDirective.js",
+			"settings":
+			{
+				"buffer_size": 3905,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/app/tests/testController.js",
+			"settings":
+			{
+				"buffer_size": 1576,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/app/tests/testView.html",
+			"settings":
+			{
+				"buffer_size": 212,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -485,10 +509,27 @@
 	},
 	"expanded_folders":
 	[
-		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map"
+		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map",
+		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/dist",
+		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/dist/js"
 	],
 	"file_history":
 	[
+		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/gruntfile.js",
+		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/index.html",
+		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/src/app/app.js",
+		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/dev/css/watg-angular-autocomplete.min.css",
+		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/package.json",
+		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/dev/js/watg-angular-autocomplete.js",
+		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/dev/js/watg-angular-autocomplete.min.js",
+		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/dist/js/watg-angular-autocomplete.js",
+		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/dist/js/watg-angular-autocomplete.min.js",
+		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/bower.json",
+		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/src/app/directives/watgGoogleMapDirective.js",
+		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/src/app/tests/testView.html",
+		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/src/app/tests/testController.js",
+		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/src/app/core/app.config.js",
+		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/src/app/appDist.js",
 		"/D/Tolga/Code/DEV/ngSprites/app/ngGoogleMaps/ngGoogleMapsView.html",
 		"/D/Tolga/Code/DEV/ngSprites/app/ngGoogleMaps/ngGoogleMapsController.js",
 		"/D/Tolga/Code/DEV/ngSprites/app/googleMaps/googleMapsController.js",
@@ -601,32 +642,18 @@
 		"/D/Tolga/Code/LATA/METRA/Schedule Manager/meanstack/public/app/services/moduleService.js",
 		"/D/Tolga/Code/LATA/METRA/Schedule Manager/meanstack/public/app/services/routeService.js",
 		"/D/Tolga/Code/LATA/METRA/Schedule Manager/meanstack/public/app/services/routeTypesService.js",
-		"/D/Tolga/Code/LATA/METRA/Schedule Manager/meanstack/public/app/services/scheduleService.js",
-		"/D/Tolga/Code/LATA/METRA/Schedule Manager/meanstack/public/app/services/shapeService.js",
-		"/D/Tolga/Code/LATA/METRA/Schedule Manager/meanstack/public/app/services/shellService.js",
-		"/D/Tolga/Code/LATA/METRA/Schedule Manager/meanstack/public/app/services/stationService.js",
-		"/D/Tolga/Code/LATA/METRA/Schedule Manager/meanstack/public/app/services/stopCodesService.js",
-		"/D/Tolga/Code/LATA/METRA/Schedule Manager/meanstack/public/app/services/stringlineService.js",
-		"/D/Tolga/Code/LATA/METRA/Schedule Manager/meanstack/public/app/services/sublineService.js",
-		"/D/Tolga/Code/LATA/METRA/Schedule Manager/meanstack/public/app/services/subrouteService.js",
-		"/D/Tolga/Code/LATA/METRA/Schedule Manager/meanstack/public/app/controllers/fareAndZoneEditorController.js",
-		"/D/Tolga/Code/LATA/METRA/Schedule Manager/meanstack/public/app/directives/smAgenciesDisplayAndEditorDirective.js",
-		"/D/Tolga/Code/LATA/METRA/Schedule Manager/meanstack/public/app/views/fareAndZoneEditorView.html",
-		"/D/Tolga/Code/LATA/METRA/Schedule Manager/meanstack/app/controllers/fares.promise.server.controller.js",
-		"/D/Tolga/Code/LATA/METRA/Schedule Manager/meanstack/public/app/templates/smAppSettingsDisplayAndEditorTemplate.html",
-		"/D/Tolga/Code/LATA/METRA/Schedule Manager/meanstack/public/app/directives/smAppSettingsDisplayAndEditorDirective.js",
-		"/D/Tolga/Code/LATA/METRA/Schedule Manager/meanstack/public/app/services/appService.js",
-		"/D/Tolga/Code/LATA/METRA/Schedule Manager/meanstack/public/app/views/adminView.html"
+		"/D/Tolga/Code/LATA/METRA/Schedule Manager/meanstack/public/app/services/scheduleService.js"
 	],
 	"find":
 	{
-		"height": 27.0
+		"height": 35.0
 	},
 	"find_in_files":
 	{
 		"height": 220.0,
 		"where_history":
 		[
+			""
 		]
 	},
 	"find_state":
@@ -634,6 +661,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"config",
+			"watg-angular-autocomplete",
 			"getVoter",
 			"getCandidateAll",
 			"ng-init",
@@ -759,9 +788,7 @@
 			"totalTripsWidth",
 			"totalWidth",
 			"availableWidth",
-			"availableHeight",
-			"availableTripContainerWidth",
-			"stopsContainerWidth"
+			"availableHeight"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -769,6 +796,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"watg-angular-google-map",
 			"$scope.openShells"
 		],
 		"reverse": false,
@@ -780,8 +808,98 @@
 	"groups":
 	[
 		{
+			"selected": 2,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "src/app/directives/watgGoogleMapDirective.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3905,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1848,
+								1848
+							]
+						],
+						"settings":
+						{
+							"is_xml": false,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 304.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/app/tests/testController.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1576,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1394,
+								1546
+							]
+						],
+						"settings":
+						{
+							"is_xml": false,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/app/tests/testView.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 212,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								11,
+								112
+							]
+						],
+						"settings":
+						{
+							"is_xml": false,
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
