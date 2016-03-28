@@ -10,10 +10,11 @@
     function watgGoogleMapDirective() {
         return {
             restrict: "E",
-            template: "<div id='map' style='height:600px;width:1025px;background-color: red'></div>",
+            template: "<div id='map' style='height:600px;width:1025px;background-color: #fff'></div>",
             replace: "true",
             scope: {
-                config: "="
+                config: "=",
+                selectedMapTypeId:"="
             },
             link: link
         };
@@ -29,8 +30,8 @@
 
             function initMap() {
                 map = new google.maps.Map(document.getElementById('map'), {
-                    center: { lat: config.lat, lng: config.lon },
-                    zoom: config.zoom,
+                    center: { lat: scope.config.lat, lng: scope.config.lon },
+                    zoom:  scope.config.zoom,
                     disableDefaultUI: true,
                     mapTypeControl: false,
                     fullscreenControl: false,
@@ -38,10 +39,10 @@
                     shadowStyle: 1
                 });
                 //styling
-                map.mapTypes.set(watg1teamhomeTypeId, config.customMapTypes[0]);
-                map.setMapTypeId(watg1teamhomeTypeId);
+                map.mapTypes.set(scope.selectedMapTypeId, scope.config.customMapTypes[0]);
+                map.setMapTypeId(scope.selectedMapTypeId);
                 //markers
-                config.markers.forEach(function(m) {
+                scope.config.markers.forEach(function(m) {
                     var contentString = '<div id="content">' + '<div id="siteNotice">' + '</div>' + '<h1 id="firstHeading" class="firstHeading">' + m.title + '</h1>' + '<div id="bodyContent">' + '<p><b>Staff:</b>' + m.staff + '</p>' + '<p><a href="my.watg.com/#team?officeName=">Team Members</a></p>' + '</div>';
                     var infowindow = new google.maps.InfoWindow({
                         content: contentString
@@ -50,7 +51,7 @@
                         position: { lat: m.lat, lng: m.lon },
                         map: map,
                         title: m.title,
-                        icon: 'assets/images/AccountMarker.png'
+                        icon: 'src/assets/images/CustomMarker.png'
                     });
                     marker.addListener('click', function() {
                         infowindow.open(map, marker);
