@@ -61,11 +61,11 @@
                 map = new google.maps.Map(document.getElementById('map'), {
                     center: { lat: scope.config.lat, lng: scope.config.lon },
                     zoom: scope.config.zoom,
-                    disableDefaultUI: true,
-                    mapTypeControl: false,
-                    fullscreenControl: false,
-                    disableAutoPan: false,
-                    shadowStyle: 1
+                    disableDefaultUI: scope.config.disableDefaultUI,
+                    mapTypeControl: scope.config.mapTypeControl,
+                    fullscreenControl: scope.config.fullscreenControl,
+                    disableAutoPan: scope.config.disableAutoPan,
+                    shadowStyle: scope.config.shadowStyle
                 });
                 //styling
                 if (scope.config.customMapTypes.length > 0) {
@@ -100,13 +100,20 @@
                     //markers
                     console.log("config.markers collection changed...");
                     if (scope.config.markers.length > 0) {
+                        console.log(newValue);
                         scope.config.markers.forEach(function(m) {
-                            var contentString = '<div id="content">';
-                            contentString += '<h3>' + m.title + '</h3>';
+                            var contentString = "<div>";
+                            contentString += "<div style='float:left;margin-right:5px;'>";
+                            if (m.imgSrc) {
+                                contentString += "<img src='" + m.imgSrc + "' style='height:100px'/></div>";
+                            }
+                            contentString += "<div style='float:right;margin-left:5px;'>";
+                            contentString += '<div><b>' + m.title + '</b></div>';
                             contentString += '<div>' + m.subTitle + '</div>';
                             contentString += '<div>' + m.linkContent + '</div>';
                             contentString + '</div>';
-                            infowindow = new google.maps.InfoWindow({
+                            contentString + '</div>';
+                            var markerInfowindow = new google.maps.InfoWindow({
                                 content: contentString
                             });
                             var marker = new google.maps.Marker({
@@ -116,7 +123,7 @@
                                 icon: scope.config.customMarkerUrl
                             });
                             marker.addListener('click', function() {
-                                infowindow.open(map, marker);
+                                markerInfowindow.open(map, marker);
                             });
                         });
                     }
@@ -166,17 +173,24 @@
 			customMapTypes: [watg1teamhome],
 			customMarkerUrl: "src/assets/images/CustomMarker.png",
 			showMyLocation: false,
+			disableDefaultUI: false,
+			mapTypeControl: false,
+			fullscreenControl: false,
+			disableAutoPan: false,
+			shadowStyle: 1,
 			markers: [{
 					title: "London",
-					subTitle:"Staff: 83",
-					linkContent:"<a href='http://www.google.com'>My Link</a>",
+					subTitle: "123 Main Road<br/>12345 London, UK<br/><br/>Staff: 83",
+					linkContent: "<a href='http://www.google.com'>My Link</a>",
+					imgSrc: "https://media-cdn.tripadvisor.com/media/photo-s/02/6b/f3/50/houses-of-parliament.jpg",
 					lat: 51.507351,
 					lon: -0.127758
             },
 				{
 					title: "Singapore",
-					subTitle:"Staff: 123",
-					linkContent:"<a href='http://www.google.com'>My Link</a>",
+					subTitle: "Staff: 123",
+					linkContent: "<a href='http://www.google.com'>My Link</a>",
+					imgSrc: "",
 					lat: 1.352083,
 					lon: 103.991531
             }]

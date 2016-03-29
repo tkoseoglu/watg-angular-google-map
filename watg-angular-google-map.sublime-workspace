@@ -379,7 +379,7 @@
 			"file": "src/app/directives/watgGoogleMapDirective.js",
 			"settings":
 			{
-				"buffer_size": 3905,
+				"buffer_size": 4652,
 				"line_ending": "Windows"
 			}
 		},
@@ -387,15 +387,7 @@
 			"file": "src/app/tests/testController.js",
 			"settings":
 			{
-				"buffer_size": 1576,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/app/tests/testView.html",
-			"settings":
-			{
-				"buffer_size": 212,
+				"buffer_size": 1742,
 				"line_ending": "Windows"
 			}
 		}
@@ -515,6 +507,7 @@
 	],
 	"file_history":
 	[
+		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/src/app/tests/testView.html",
 		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/gruntfile.js",
 		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/index.html",
 		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/src/app/app.js",
@@ -526,7 +519,6 @@
 		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/dist/js/watg-angular-autocomplete.min.js",
 		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/bower.json",
 		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/src/app/directives/watgGoogleMapDirective.js",
-		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/src/app/tests/testView.html",
 		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/src/app/tests/testController.js",
 		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/src/app/core/app.config.js",
 		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/src/app/appDist.js",
@@ -808,7 +800,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -817,15 +809,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3905,
+						"buffer_size": 4652,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1848,
-								1848
+								3389,
+								3389
 							]
 						],
 						"settings":
@@ -836,10 +828,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 304.0,
+						"translation.y": 886.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -848,50 +840,22 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1576,
+						"buffer_size": 1742,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1394,
-								1546
+								1213,
+								1213
 							]
 						],
 						"settings":
 						{
 							"is_xml": false,
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "src/app/tests/testView.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 212,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								11,
-								112
-							]
-						],
-						"settings":
-						{
-							"is_xml": false,
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,

@@ -32,11 +32,11 @@
                 map = new google.maps.Map(document.getElementById('map'), {
                     center: { lat: scope.config.lat, lng: scope.config.lon },
                     zoom: scope.config.zoom,
-                    disableDefaultUI: true,
-                    mapTypeControl: false,
-                    fullscreenControl: false,
-                    disableAutoPan: false,
-                    shadowStyle: 1
+                    disableDefaultUI: scope.config.disableDefaultUI,
+                    mapTypeControl: scope.config.mapTypeControl,
+                    fullscreenControl: scope.config.fullscreenControl,
+                    disableAutoPan: scope.config.disableAutoPan,
+                    shadowStyle: scope.config.shadowStyle
                 });
                 //styling
                 if (scope.config.customMapTypes.length > 0) {
@@ -73,10 +73,16 @@
                     if (scope.config.markers.length > 0) {
                         console.log(newValue);
                         scope.config.markers.forEach(function(m) {
-                            var contentString = '<div id="content">';
-                            contentString += '<h3>' + m.title + '</h3>';
+                            var contentString = "<div>";
+                            contentString += "<div style='float:left;margin-right:5px;'>";
+                            if (m.imgSrc) {
+                                contentString += "<img src='" + m.imgSrc + "' style='height:100px'/></div>";
+                            }
+                            contentString += "<div style='float:right;margin-left:5px;'>";
+                            contentString += '<div><b>' + m.title + '</b></div>';
                             contentString += '<div>' + m.subTitle + '</div>';
                             contentString += '<div>' + m.linkContent + '</div>';
+                            contentString + '</div>';
                             contentString + '</div>';
                             var markerInfowindow = new google.maps.InfoWindow({
                                 content: contentString
