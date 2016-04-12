@@ -65,7 +65,8 @@
                 }
                 //overlay
                 new DayNightOverlay({
-                    map: map
+                    map: map,
+                    fillColor: scope.config.dayNightOverlayFillColor || 'rgba(0,0,0,0.3)'
                 });
                 scope.$watchCollection('config.markers', function(newValue, oldValue) {
                     //markers

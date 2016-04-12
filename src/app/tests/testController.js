@@ -42,6 +42,7 @@
 			fullscreenControl: false,
 			disableAutoPan: false,
 			shadowStyle: 1,
+			dayNightOverlayFillColor: 'rgba(0,0,0,0.1)',
 			markers: [{
 					title: "London",
 					subTitle: "123 Main Road<br/>12345 London, UK<br/><br/>Staff: 83",
@@ -58,7 +59,7 @@
 					lat: 1.352083,
 					lon: 103.991531
             }],
-            clusterMarkers: [{
+			clusterMarkers: [{
 					title: "Irvine",
 					subTitle: "123 Main Road<br/>12345 London, UK<br/><br/>Staff: 83",
 					linkContent: "<a href='http://www.google.com'>My Link</a>",

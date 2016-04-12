@@ -21,12 +21,12 @@
     "tests"
   ],
   "dependencies": {
-    "angular": "^1.5.3",
-    "google-maps-api-addons": "^1.0.0"
+    "angular": "^1.5.3"
   },
   "devDependencies": {
     "bootstrap": "^3.3.6",
     "angular-sanitize": "^1.5.3",
-    "angular-route": "^1.5.3"
+    "angular-route": "^1.5.3",
+    "google-maps-api-addons": "^1.0.0"
   }
 }

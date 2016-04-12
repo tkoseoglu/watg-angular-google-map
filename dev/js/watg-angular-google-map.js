@@ -94,7 +94,8 @@
                 }
                 //overlay
                 new DayNightOverlay({
-                    map: map
+                    map: map,
+                    fillColor: scope.config.dayNightOverlayFillColor || 'rgba(0,0,0,0.3)'
                 });
                 scope.$watchCollection('config.markers', function(newValue, oldValue) {
                     //markers
@@ -208,6 +209,7 @@
 			fullscreenControl: false,
 			disableAutoPan: false,
 			shadowStyle: 1,
+			dayNightOverlayFillColor:'rgba(0,0,0,0.1)',
 			markers: [{
 					title: "London",
 					subTitle: "123 Main Road<br/>12345 London, UK<br/><br/>Staff: 83",
