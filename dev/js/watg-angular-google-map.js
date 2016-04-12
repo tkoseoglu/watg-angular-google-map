@@ -128,6 +128,36 @@
                         });
                     }
                 });
+                scope.$watchCollection('config.clusterMarkers', function(newValue, oldValue) {
+                    //markers
+                    console.log("config.clusterMarkers collection changed...");
+                    if (scope.config.clusterMarkers.length > 0) {
+                        var clusterMarkers = [];
+                        scope.config.clusterMarkers.forEach(function(m) {
+                            var contentString = "<div>";
+                            contentString += "<div style='float:left;margin-right:5px;'>";
+                            if (m.imgSrc) {
+                                contentString += "<img src='" + m.imgSrc + "' style='height:100px'/></div>";
+                            }
+                            contentString += "<div style='float:right;margin-left:5px;'>";
+                            contentString += '<div><b>' + m.title + '</b></div>';
+                            contentString += '<div>' + m.subTitle + '</div>';
+                            contentString += '<div>' + m.linkContent + '</div>';
+                            contentString + '</div>';
+                            contentString + '</div>';
+                            var markerInfowindow = new google.maps.InfoWindow({
+                                content: contentString
+                            });
+                            var marker = new google.maps.Marker({
+                                position: { lat: m.lat, lng: m.lon },
+                                title: m.title,
+                                icon: scope.config.customMarkerUrl
+                            });
+                            clusterMarkers.push(marker);
+                        });
+                        var markerCluster = new MarkerClusterer(map, clusterMarkers);
+                    }
+                });
             }
             initMap();
         }
@@ -193,6 +223,22 @@
 					imgSrc: "",
 					lat: 1.352083,
 					lon: 103.991531
+            }],
+            clusterMarkers: [{
+					title: "Irvine",
+					subTitle: "123 Main Road<br/>12345 London, UK<br/><br/>Staff: 83",
+					linkContent: "<a href='http://www.google.com'>My Link</a>",
+					imgSrc: "https://media-cdn.tripadvisor.com/media/photo-s/02/6b/f3/50/houses-of-parliament.jpg",
+					lat: 33.6537373,
+					lon: -117.7473137
+            },
+				{
+					title: "Los Angeles",
+					subTitle: "Staff: 123",
+					linkContent: "<a href='http://www.google.com'>My Link</a>",
+					imgSrc: "",
+					lat: 34.0736204,
+					lon: -118.4003563
             }]
 		};
 	}

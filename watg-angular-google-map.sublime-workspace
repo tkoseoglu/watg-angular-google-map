@@ -379,7 +379,7 @@
 			"file": "src/app/directives/watgGoogleMapDirective.js",
 			"settings":
 			{
-				"buffer_size": 4652,
+				"buffer_size": 4769,
 				"line_ending": "Windows"
 			}
 		},
@@ -387,7 +387,7 @@
 			"file": "src/app/tests/testController.js",
 			"settings":
 			{
-				"buffer_size": 1742,
+				"buffer_size": 1870,
 				"line_ending": "Windows"
 			}
 		}
@@ -809,15 +809,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4652,
+						"buffer_size": 4769,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3389,
-								3389
+								1145,
+								1145
 							]
 						],
 						"settings":
@@ -828,7 +828,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 886.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -840,15 +840,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1742,
+						"buffer_size": 1870,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1213,
-								1213
+								1202,
+								1326
 							]
 						],
 						"settings":
@@ -858,7 +858,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 300.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,

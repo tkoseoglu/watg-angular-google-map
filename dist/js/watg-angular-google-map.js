@@ -99,6 +99,36 @@
                         });
                     }
                 });
+                scope.$watchCollection('config.clusterMarkers', function(newValue, oldValue) {
+                    //markers
+                    console.log("config.clusterMarkers collection changed...");
+                    if (scope.config.clusterMarkers.length > 0) {
+                        var clusterMarkers = [];
+                        scope.config.clusterMarkers.forEach(function(m) {
+                            var contentString = "<div>";
+                            contentString += "<div style='float:left;margin-right:5px;'>";
+                            if (m.imgSrc) {
+                                contentString += "<img src='" + m.imgSrc + "' style='height:100px'/></div>";
+                            }
+                            contentString += "<div style='float:right;margin-left:5px;'>";
+                            contentString += '<div><b>' + m.title + '</b></div>';
+                            contentString += '<div>' + m.subTitle + '</div>';
+                            contentString += '<div>' + m.linkContent + '</div>';
+                            contentString + '</div>';
+                            contentString + '</div>';
+                            var markerInfowindow = new google.maps.InfoWindow({
+                                content: contentString
+                            });
+                            var marker = new google.maps.Marker({
+                                position: { lat: m.lat, lng: m.lon },
+                                title: m.title,
+                                icon: scope.config.customMarkerUrl
+                            });
+                            clusterMarkers.push(marker);
+                        });
+                        var markerCluster = new MarkerClusterer(map, clusterMarkers);
+                    }
+                });
             }
             initMap();
         }
