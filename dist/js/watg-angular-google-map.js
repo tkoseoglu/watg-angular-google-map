@@ -125,6 +125,9 @@
                                 title: m.title,
                                 icon: scope.config.customMarkerUrl
                             });
+                            marker.addListener('click', function() {
+                                markerInfowindow.open(map, marker);
+                            });
                             clusterMarkers.push(marker);
                         });
                         var markerCluster = new MarkerClusterer(map, clusterMarkers);
