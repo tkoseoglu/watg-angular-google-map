@@ -47,15 +47,10 @@ module.exports = function(grunt) {
             },
             vendorDist: {
                 src: [
-                    'bower_components/jquery/dist.jquery.min.js',
-                    'bower_components/bootstrap/dist/js/bootstrap.min.js',
-                    'bower_components/angular/angular.min.js',
-                    'bower_components/angular-route/angular-route.min.js',
-                    'bower_components/angular-sanitize/angular-sanitize.min.js',
                     'bower_components/google-maps-api-addons/daynightoverlay/src/daynightoverlay.js',
                     'bower_components/google-markercluster/markercluster.js'
                 ],
-                dest: 'dev/js/vendor.min.js'
+                dest: 'dist/js/watg-angular-google-map-vendor-dependencies.min.js'
             }
         },
         uglify: {
@@ -152,5 +147,5 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks("grunt-contrib-jshint");
     grunt.registerTask('dev', ["jshint", 'concat', 'uglify', 'concat_css', 'cssmin', 'copy', 'connect:dev', 'watch']); //, 'watch'
-    grunt.registerTask('dist', ['concat:appDist', 'uglify:appDist', 'concat_css:assetsDist', 'cssmin:assetsDist', 'copy:dist']);
+    grunt.registerTask('dist', ['concat:appDist','concat:vendorDist', 'uglify:appDist', 'concat_css:assetsDist', 'cssmin:assetsDist', 'copy:dist']);
 };
