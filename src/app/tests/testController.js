@@ -31,9 +31,9 @@
 		});
 		$scope.selectedMapTypeId = 'watg1_team_home';
 		$scope.mapConfig = {
-			lat: 30,
-			lon: 10,
-			zoom: 2,
+			lat: 15,
+			lon: 0,
+			zoom: 3,
 			customMapTypes: [watg1teamhome],
 			customMarkerUrl: "src/assets/images/CustomMarker.png",
 			showMyLocation: false,

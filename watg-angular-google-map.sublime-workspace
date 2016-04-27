@@ -376,10 +376,18 @@
 	"buffers":
 	[
 		{
-			"file": "src/app/directives/watgGoogleMapDirective.js",
+			"file": "src/app/tests/testView.html",
 			"settings":
 			{
-				"buffer_size": 4769,
+				"buffer_size": 215,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 572,
 				"line_ending": "Windows"
 			}
 		},
@@ -387,7 +395,15 @@
 			"file": "src/app/tests/testController.js",
 			"settings":
 			{
-				"buffer_size": 1870,
+				"buffer_size": 2464,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/app/directives/watgGoogleMapDirective.js",
+			"settings":
+			{
+				"buffer_size": 6857,
 				"line_ending": "Windows"
 			}
 		}
@@ -502,13 +518,20 @@
 	"expanded_folders":
 	[
 		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map",
-		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/dist",
-		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/dist/js"
+		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/bower_components",
+		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/src",
+		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/src/app",
+		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/src/app/directives",
+		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/src/app/tests",
+		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/src/assets/images"
 	],
 	"file_history":
 	[
-		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/src/app/tests/testView.html",
 		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/gruntfile.js",
+		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/bower.json",
+		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/bower_components/google-markercluster/markercluster.js",
+		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/src/app/tests/testView.html",
+		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/src/app/tests/testController.js",
 		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/index.html",
 		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/src/app/app.js",
 		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/dev/css/watg-angular-autocomplete.min.css",
@@ -517,9 +540,7 @@
 		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/dev/js/watg-angular-autocomplete.min.js",
 		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/dist/js/watg-angular-autocomplete.js",
 		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/dist/js/watg-angular-autocomplete.min.js",
-		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/bower.json",
 		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/src/app/directives/watgGoogleMapDirective.js",
-		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/src/app/tests/testController.js",
 		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/src/app/core/app.config.js",
 		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/src/app/appDist.js",
 		"/D/Tolga/Code/DEV/ngSprites/app/ngGoogleMaps/ngGoogleMapsView.html",
@@ -633,8 +654,7 @@
 		"/D/Tolga/Code/LATA/METRA/Schedule Manager/meanstack/public/app/services/groupService.js",
 		"/D/Tolga/Code/LATA/METRA/Schedule Manager/meanstack/public/app/services/moduleService.js",
 		"/D/Tolga/Code/LATA/METRA/Schedule Manager/meanstack/public/app/services/routeService.js",
-		"/D/Tolga/Code/LATA/METRA/Schedule Manager/meanstack/public/app/services/routeTypesService.js",
-		"/D/Tolga/Code/LATA/METRA/Schedule Manager/meanstack/public/app/services/scheduleService.js"
+		"/D/Tolga/Code/LATA/METRA/Schedule Manager/meanstack/public/app/services/routeTypesService.js"
 	],
 	"find":
 	{
@@ -800,24 +820,113 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "src/app/directives/watgGoogleMapDirective.js",
+					"file": "src/app/tests/testView.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4769,
+						"buffer_size": 215,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1145,
-								1145
+								19,
+								39
+							]
+						],
+						"settings":
+						{
+							"is_xml": false,
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 572,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								516,
+								516
+							]
+						],
+						"settings":
+						{
+							"is_xml": false,
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 3,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/app/tests/testController.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2464,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1076,
+								1076
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 240.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/app/directives/watgGoogleMapDirective.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6857,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1218,
+								1218
 							]
 						],
 						"settings":
@@ -831,37 +940,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "src/app/tests/testController.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1870,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1202,
-								1326
-							]
-						],
-						"settings":
-						{
-							"is_xml": false,
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 300.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
+					"stack_index": 2,
 					"type": "text"
 				}
 			]

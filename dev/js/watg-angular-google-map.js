@@ -154,6 +154,9 @@
                                 title: m.title,
                                 icon: scope.config.customMarkerUrl
                             });
+                            marker.addListener('click', function() {
+                                markerInfowindow.open(map, marker);
+                            });
                             clusterMarkers.push(marker);
                         });
                         var markerCluster = new MarkerClusterer(map, clusterMarkers);
@@ -198,9 +201,9 @@
 		});
 		$scope.selectedMapTypeId = 'watg1_team_home';
 		$scope.mapConfig = {
-			lat: 30,
-			lon: 10,
-			zoom: 2,
+			lat: 15,
+			lon: 0,
+			zoom: 3,
 			customMapTypes: [watg1teamhome],
 			customMarkerUrl: "src/assets/images/CustomMarker.png",
 			showMyLocation: false,
@@ -209,7 +212,7 @@
 			fullscreenControl: false,
 			disableAutoPan: false,
 			shadowStyle: 1,
-			dayNightOverlayFillColor:'rgba(0,0,0,0.1)',
+			dayNightOverlayFillColor: 'rgba(0,0,0,0.1)',
 			markers: [{
 					title: "London",
 					subTitle: "123 Main Road<br/>12345 London, UK<br/><br/>Staff: 83",
@@ -226,7 +229,7 @@
 					lat: 1.352083,
 					lon: 103.991531
             }],
-            clusterMarkers: [{
+			clusterMarkers: [{
 					title: "Irvine",
 					subTitle: "123 Main Road<br/>12345 London, UK<br/><br/>Staff: 83",
 					linkContent: "<a href='http://www.google.com'>My Link</a>",
