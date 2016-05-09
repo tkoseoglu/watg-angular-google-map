@@ -39,7 +39,7 @@
                     shadowStyle: scope.config.shadowStyle
                 });
                 //styling
-                if (scope.config.customMapTypes.length > 0) {
+                if (scope.config.customMapTypes !== undefined && scope.config.customMapTypes.length > 0) {
                     map.mapTypes.set(scope.selectedMapTypeId, scope.config.customMapTypes[0]);
                     map.setMapTypeId(scope.selectedMapTypeId);
                 }
@@ -74,6 +74,10 @@
                     if (scope.config.markers.length > 0) {
                         console.log(newValue);
                         scope.config.markers.forEach(function(m) {
+                            var iconUrl = m.iconUrl;
+                            if(iconUrl === undefined){
+                                iconUrl = scope.config.customMarkerUrl;
+                            }
                             var contentString = "<div>";
                             contentString += "<div style='float:left;margin-right:5px;'>";
                             if (m.imgSrc) {
@@ -92,7 +96,8 @@
                                 position: { lat: m.lat, lng: m.lon },
                                 map: map,
                                 title: m.title,
-                                icon: scope.config.customMarkerUrl
+                                icon: iconUrl,
+                                origin: m.origin
                             });
                             marker.addListener('click', function() {
                                 markerInfowindow.open(map, marker);

@@ -34,7 +34,7 @@
                     shadowStyle: scope.config.shadowStyle
                 });
                 //styling
-                if (scope.config.customMapTypes.length > 0) {
+                if (scope.config.customMapTypes !== undefined && scope.config.customMapTypes.length > 0) {
                     map.mapTypes.set(scope.selectedMapTypeId, scope.config.customMapTypes[0]);
                     map.setMapTypeId(scope.selectedMapTypeId);
                 }
@@ -87,7 +87,7 @@
                                 position: { lat: m.lat, lng: m.lon },
                                 map: map,
                                 title: m.title,
-                                icon: scope.config.customMarkerUrl
+                                icon: m.icon,
                             });
                             marker.addListener('click', function() {
                                 markerInfowindow.open(map, marker);
