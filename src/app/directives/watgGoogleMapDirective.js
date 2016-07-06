@@ -110,8 +110,8 @@
                             contentString += '<div><b>' + m.title + '</b></div>';
                             contentString += '<div>' + m.subTitle + '</div>';
                             contentString += '<div>' + m.linkContent + '</div>';
-                            contentString + '</div>';
-                            contentString + '</div>';
+                            contentString += '</div>';
+                            contentString += '</div>';
                             var markerInfowindow = new google.maps.InfoWindow({
                                 content: contentString
                             });
@@ -125,7 +125,10 @@
                             });
                             clusterMarkers.push(marker);
                         });
-                        var markerCluster = new MarkerClusterer(map, clusterMarkers);
+                        var options = {
+                            imagePath: 'https://raw.githubusercontent.com/googlemaps/js-marker-clusterer/gh-pages/images/m'
+                        };
+                        var markerCluster = new MarkerClusterer(map, clusterMarkers, options);
                     }
                 });
             }
