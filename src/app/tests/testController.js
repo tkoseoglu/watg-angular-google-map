@@ -35,7 +35,7 @@
 			lon: -117,
 			zoom: 3,
 			customMapTypes: [watg1teamhome],
-			customMarkerUrl: "src/assets/images/CustomMarker.png",
+			//customMarkerUrl: "src/assets/images/CustomMarker.png",
 			showMyLocation: false,
 			disableDefaultUI: false,
 			mapTypeControl: false,
@@ -138,8 +138,22 @@
 					linkContent: "<a href='http://www.google.com'>My Link</a>",
 					lat: 35.0853336,
 					lon: -106.6055534
+				},{
+					title: "New York",
+					subTitle: "New York...",
+					linkContent: "<a href='http://www.google.com'>My Link</a>",
+					lat: 40.7127837,
+					lon: -74.0059413
+				},
+				{
+					title: "Austin",
+					subTitle: "Austin...",
+					linkContent: "<a href='http://www.google.com'>My Link</a>",
+					lat: 30.267153,
+					lon: -97.7430608
 				}
-			]
+			],
+			clusterGridSize: 100
 		};
 	}
 })();

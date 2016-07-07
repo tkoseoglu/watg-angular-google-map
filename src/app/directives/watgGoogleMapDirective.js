@@ -126,7 +126,8 @@
                             clusterMarkers.push(marker);
                         });
                         var options = {
-                            imagePath: 'https://raw.githubusercontent.com/googlemaps/js-marker-clusterer/gh-pages/images/m'
+                            imagePath: 'https://raw.githubusercontent.com/googlemaps/js-marker-clusterer/gh-pages/images/m',
+                            gridSize: scope.config.clusterGridSize
                         };
                         var markerCluster = new MarkerClusterer(map, clusterMarkers, options);
                     }

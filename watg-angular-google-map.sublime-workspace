@@ -379,7 +379,7 @@
 			"file": "src/app/directives/watgGoogleMapDirective.js",
 			"settings":
 			{
-				"buffer_size": 6881,
+				"buffer_size": 7083,
 				"line_ending": "Windows"
 			}
 		},
@@ -387,7 +387,7 @@
 			"file": "src/app/tests/testController.js",
 			"settings":
 			{
-				"buffer_size": 3995,
+				"buffer_size": 4615,
 				"line_ending": "Windows"
 			}
 		}
@@ -503,14 +503,13 @@
 	[
 		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map",
 		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/src",
-		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/src/app",
-		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/src/app/directives",
-		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/src/app/tests",
 		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/src/assets",
 		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/src/assets/images"
 	],
 	"file_history":
 	[
+		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/junk.html",
+		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/src/app/data.json",
 		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/src/app/tests/testView.html",
 		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/index.html",
 		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/src/app/directives/watgGoogleMapDirective.js",
@@ -636,9 +635,7 @@
 		"/D/Tolga/Code/LATA/METRA/Schedule Manager/meanstack/public/app/services/agenciesService.js",
 		"/D/Tolga/Code/LATA/METRA/Schedule Manager/meanstack/public/app/services/fareZonesService.js",
 		"/D/Tolga/Code/LATA/METRA/Schedule Manager/meanstack/public/app/services/groupService.js",
-		"/D/Tolga/Code/LATA/METRA/Schedule Manager/meanstack/public/app/services/moduleService.js",
-		"/D/Tolga/Code/LATA/METRA/Schedule Manager/meanstack/public/app/services/routeService.js",
-		"/D/Tolga/Code/LATA/METRA/Schedule Manager/meanstack/public/app/services/routeTypesService.js"
+		"/D/Tolga/Code/LATA/METRA/Schedule Manager/meanstack/public/app/services/moduleService.js"
 	],
 	"find":
 	{
@@ -813,15 +810,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6881,
+						"buffer_size": 7083,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3276,
-								3276
+								6394,
+								6409
 							]
 						],
 						"settings":
@@ -830,8 +827,8 @@
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.x": 9.0,
+						"translation.y": 1976.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -843,15 +840,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3995,
+						"buffer_size": 4615,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2319,
-								2319
+								1072,
+								1072
 							]
 						],
 						"settings":
@@ -860,7 +857,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1239.0,
+						"translation.y": 319.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
