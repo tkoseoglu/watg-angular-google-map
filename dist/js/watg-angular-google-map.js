@@ -23,6 +23,9 @@
             var map;
             var infowindow;
             var clusterMarkers = [];
+            var randomMin = -0.05;
+            var randomMax = 0.05;
+
             function handleLocationError(browserHasGeolocation, infoWindow, pos) {
                 infoWindow.setPosition(pos);
                 infoWindow.setContent(browserHasGeolocation ? 'Error: The Geolocation service failed.' : 'Error: Your browser doesn\'t support geolocation.');
@@ -35,8 +38,13 @@
                 for (var ii = 0; ii < clusterMarkers.length; ii++) {
                     clusterMarkers[ii].setMap(null);
                 }
-                clusterMarkers=[];
+                clusterMarkers = [];
                 console.log("all markers removed");
+            }
+
+            function getRandomNumber(min, max) {
+                var ran = Math.random() * (max - min) + min;
+                return ran;
             }
 
             function initMap() {
@@ -140,8 +148,10 @@
                                     var pos = existingMarker.getPosition();
                                     if (latLng.equals(pos)) {
                                         var a = 360.0 / clusterMarkers.length;
-                                        var newLat = pos.lat() + -.0004 * Math.cos((+a * i) / 180 * Math.PI); //x
-                                        var newLng = pos.lng() + -.0004 * Math.sin((+a * i) / 180 * Math.PI); //Y
+                                        var ran1 = getRandomNumber(randomMin, randomMax);
+                                        var ran2 = getRandomNumber(randomMin, randomMax);
+                                        var newLat = pos.lat() + ran1 * Math.cos((+a * i) / 180 * Math.PI); //x
+                                        var newLng = pos.lng() + ran2 * Math.sin((+a * i) / 180 * Math.PI); //Y
                                         latLng = new google.maps.LatLng(newLat, newLng);
                                     }
                                 }
