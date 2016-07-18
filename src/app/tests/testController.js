@@ -44,6 +44,7 @@
 			shadowStyle: 1,
 			showDayNightOverlay: true,
 			dayNightOverlayFillColor: 'rgba(0,0,0,0.1)',
+			fixOverlappingPins: true,
 			clusterMarkers: [{
 					title: "Santa Fe",
 					subTitle: "Santa Fe...",
@@ -74,367 +75,367 @@
 					linkContent: "<a href='http://www.google.com'>My Link</a>",
 					lat: 35.0853336,
 					lon: -106.6055534
-				},{
+				}, {
 					title: "Albuquerque 4",
 					subTitle: "Albuquerque 4...",
 					linkContent: "<a href='http://www.google.com'>My Link</a>",
 					lat: 35.0853336,
 					lon: -106.6055534
-				},{
+				}, {
 					title: "Albuquerque 4",
 					subTitle: "Albuquerque 4...",
 					linkContent: "<a href='http://www.google.com'>My Link</a>",
 					lat: 35.0853336,
 					lon: -106.6055534
-				},{
+				}, {
 					title: "Albuquerque 4",
 					subTitle: "Albuquerque 4...",
 					linkContent: "<a href='http://www.google.com'>My Link</a>",
 					lat: 35.0853336,
 					lon: -106.6055534
-				},{
+				}, {
 					title: "Albuquerque 4",
 					subTitle: "Albuquerque 4...",
 					linkContent: "<a href='http://www.google.com'>My Link</a>",
 					lat: 35.0853336,
 					lon: -106.6055534
-				},{
+				}, {
 					title: "Albuquerque 4",
 					subTitle: "Albuquerque 4...",
 					linkContent: "<a href='http://www.google.com'>My Link</a>",
 					lat: 35.0853336,
 					lon: -106.6055534
-				},{
+				}, {
 					title: "Albuquerque 4",
 					subTitle: "Albuquerque 4...",
 					linkContent: "<a href='http://www.google.com'>My Link</a>",
 					lat: 35.0853336,
 					lon: -106.6055534
-				},{
+				}, {
 					title: "Albuquerque 4",
 					subTitle: "Albuquerque 4...",
 					linkContent: "<a href='http://www.google.com'>My Link</a>",
 					lat: 35.0853336,
 					lon: -106.6055534
-				},{
+				}, {
 					title: "Albuquerque 4",
 					subTitle: "Albuquerque 4...",
 					linkContent: "<a href='http://www.google.com'>My Link</a>",
 					lat: 35.0853336,
 					lon: -106.6055534
-				},{
+				}, {
 					title: "Albuquerque 4",
 					subTitle: "Albuquerque 4...",
 					linkContent: "<a href='http://www.google.com'>My Link</a>",
 					lat: 35.0853336,
 					lon: -106.6055534
-				},{
+				}, {
 					title: "Albuquerque 4",
 					subTitle: "Albuquerque 4...",
 					linkContent: "<a href='http://www.google.com'>My Link</a>",
 					lat: 35.0853336,
 					lon: -106.6055534
-				},{
+				}, {
 					title: "Albuquerque 4",
 					subTitle: "Albuquerque 4...",
 					linkContent: "<a href='http://www.google.com'>My Link</a>",
 					lat: 35.0853336,
 					lon: -106.6055534
-				},{
+				}, {
 					title: "Albuquerque 4",
 					subTitle: "Albuquerque 4...",
 					linkContent: "<a href='http://www.google.com'>My Link</a>",
 					lat: 35.0853336,
 					lon: -106.6055534
-				},{
+				}, {
 					title: "Albuquerque 4",
 					subTitle: "Albuquerque 4...",
 					linkContent: "<a href='http://www.google.com'>My Link</a>",
 					lat: 35.0853336,
 					lon: -106.6055534
-				},{
+				}, {
 					title: "Albuquerque 4",
 					subTitle: "Albuquerque 4...",
 					linkContent: "<a href='http://www.google.com'>My Link</a>",
 					lat: 35.0853336,
 					lon: -106.6055534
-				},{
+				}, {
 					title: "Albuquerque 4",
 					subTitle: "Albuquerque 4...",
 					linkContent: "<a href='http://www.google.com'>My Link</a>",
 					lat: 35.0853336,
 					lon: -106.6055534
-				},{
+				}, {
 					title: "Albuquerque 4",
 					subTitle: "Albuquerque 4...",
 					linkContent: "<a href='http://www.google.com'>My Link</a>",
 					lat: 35.0853336,
 					lon: -106.6055534
-				},{
+				}, {
 					title: "Albuquerque 4",
 					subTitle: "Albuquerque 4...",
 					linkContent: "<a href='http://www.google.com'>My Link</a>",
 					lat: 35.0853336,
 					lon: -106.6055534
-				},{
+				}, {
 					title: "Albuquerque 4",
 					subTitle: "Albuquerque 4...",
 					linkContent: "<a href='http://www.google.com'>My Link</a>",
 					lat: 35.0853336,
 					lon: -106.6055534
-				},{
+				}, {
 					title: "Albuquerque 4",
 					subTitle: "Albuquerque 4...",
 					linkContent: "<a href='http://www.google.com'>My Link</a>",
 					lat: 35.0853336,
 					lon: -106.6055534
-				},{
+				}, {
 					title: "Albuquerque 4",
 					subTitle: "Albuquerque 4...",
 					linkContent: "<a href='http://www.google.com'>My Link</a>",
 					lat: 35.0853336,
 					lon: -106.6055534
-				},{
+				}, {
 					title: "Albuquerque 4",
 					subTitle: "Albuquerque 4...",
 					linkContent: "<a href='http://www.google.com'>My Link</a>",
 					lat: 35.0853336,
 					lon: -106.6055534
-				},{
+				}, {
 					title: "Albuquerque 4",
 					subTitle: "Albuquerque 4...",
 					linkContent: "<a href='http://www.google.com'>My Link</a>",
 					lat: 35.0853336,
 					lon: -106.6055534
-				},{
+				}, {
 					title: "Albuquerque 4",
 					subTitle: "Albuquerque 4...",
 					linkContent: "<a href='http://www.google.com'>My Link</a>",
 					lat: 35.0853336,
 					lon: -106.6055534
-				},{
+				}, {
 					title: "Albuquerque 4",
 					subTitle: "Albuquerque 4...",
 					linkContent: "<a href='http://www.google.com'>My Link</a>",
 					lat: 35.0853336,
 					lon: -106.6055534
-				},{
+				}, {
 					title: "Albuquerque 4",
 					subTitle: "Albuquerque 4...",
 					linkContent: "<a href='http://www.google.com'>My Link</a>",
 					lat: 35.0853336,
 					lon: -106.6055534
-				},{
+				}, {
 					title: "Albuquerque 4",
 					subTitle: "Albuquerque 4...",
 					linkContent: "<a href='http://www.google.com'>My Link</a>",
 					lat: 35.0853336,
 					lon: -106.6055534
-				},{
+				}, {
 					title: "Albuquerque 4",
 					subTitle: "Albuquerque 4...",
 					linkContent: "<a href='http://www.google.com'>My Link</a>",
 					lat: 35.0853336,
 					lon: -106.6055534
-				},{
+				}, {
 					title: "Albuquerque 4",
 					subTitle: "Albuquerque 4...",
 					linkContent: "<a href='http://www.google.com'>My Link</a>",
 					lat: 35.0853336,
 					lon: -106.6055534
-				},{
+				}, {
 					title: "Albuquerque 4",
 					subTitle: "Albuquerque 4...",
 					linkContent: "<a href='http://www.google.com'>My Link</a>",
 					lat: 35.0853336,
 					lon: -106.6055534
-				},{
+				}, {
 					title: "Albuquerque 4",
 					subTitle: "Albuquerque 4...",
 					linkContent: "<a href='http://www.google.com'>My Link</a>",
 					lat: 35.0853336,
 					lon: -106.6055534
-				},{
+				}, {
 					title: "Albuquerque 4",
 					subTitle: "Albuquerque 4...",
 					linkContent: "<a href='http://www.google.com'>My Link</a>",
 					lat: 35.0853336,
 					lon: -106.6055534
-				},{
+				}, {
 					title: "Albuquerque 4",
 					subTitle: "Albuquerque 4...",
 					linkContent: "<a href='http://www.google.com'>My Link</a>",
 					lat: 35.0853336,
 					lon: -106.6055534
-				},{
+				}, {
 					title: "Albuquerque 4",
 					subTitle: "Albuquerque 4...",
 					linkContent: "<a href='http://www.google.com'>My Link</a>",
 					lat: 35.0853336,
 					lon: -106.6055534
-				},{
+				}, {
 					title: "Albuquerque 4",
 					subTitle: "Albuquerque 4...",
 					linkContent: "<a href='http://www.google.com'>My Link</a>",
 					lat: 35.0853336,
 					lon: -106.6055534
-				},{
+				}, {
 					title: "Albuquerque 4",
 					subTitle: "Albuquerque 4...",
 					linkContent: "<a href='http://www.google.com'>My Link</a>",
 					lat: 35.0853336,
 					lon: -106.6055534
-				},{
+				}, {
 					title: "Albuquerque 4",
 					subTitle: "Albuquerque 4...",
 					linkContent: "<a href='http://www.google.com'>My Link</a>",
 					lat: 35.0853336,
 					lon: -106.6055534
-				},{
+				}, {
 					title: "Albuquerque 4",
 					subTitle: "Albuquerque 4...",
 					linkContent: "<a href='http://www.google.com'>My Link</a>",
 					lat: 35.0853336,
 					lon: -106.6055534
-				},{
+				}, {
 					title: "Albuquerque 4",
 					subTitle: "Albuquerque 4...",
 					linkContent: "<a href='http://www.google.com'>My Link</a>",
 					lat: 35.0853336,
 					lon: -106.6055534
-				},{
+				}, {
 					title: "Albuquerque 4",
 					subTitle: "Albuquerque 4...",
 					linkContent: "<a href='http://www.google.com'>My Link</a>",
 					lat: 35.0853336,
 					lon: -106.6055534
-				},{
+				}, {
 					title: "Albuquerque 4",
 					subTitle: "Albuquerque 4...",
 					linkContent: "<a href='http://www.google.com'>My Link</a>",
 					lat: 35.0853336,
 					lon: -106.6055534
-				},{
+				}, {
 					title: "Albuquerque 4",
 					subTitle: "Albuquerque 4...",
 					linkContent: "<a href='http://www.google.com'>My Link</a>",
 					lat: 35.0853336,
 					lon: -106.6055534
-				},{
+				}, {
 					title: "Albuquerque 4",
 					subTitle: "Albuquerque 4...",
 					linkContent: "<a href='http://www.google.com'>My Link</a>",
 					lat: 35.0853336,
 					lon: -106.6055534
-				},{
+				}, {
 					title: "Albuquerque 4",
 					subTitle: "Albuquerque 4...",
 					linkContent: "<a href='http://www.google.com'>My Link</a>",
 					lat: 35.0853336,
 					lon: -106.6055534
-				},{
+				}, {
 					title: "Albuquerque 4",
 					subTitle: "Albuquerque 4...",
 					linkContent: "<a href='http://www.google.com'>My Link</a>",
 					lat: 35.0853336,
 					lon: -106.6055534
-				},{
+				}, {
 					title: "Albuquerque 4",
 					subTitle: "Albuquerque 4...",
 					linkContent: "<a href='http://www.google.com'>My Link</a>",
 					lat: 35.0853336,
 					lon: -106.6055534
-				},{
+				}, {
 					title: "Albuquerque 4",
 					subTitle: "Albuquerque 4...",
 					linkContent: "<a href='http://www.google.com'>My Link</a>",
 					lat: 35.0853336,
 					lon: -106.6055534
-				},{
+				}, {
 					title: "Albuquerque 4",
 					subTitle: "Albuquerque 4...",
 					linkContent: "<a href='http://www.google.com'>My Link</a>",
 					lat: 35.0853336,
 					lon: -106.6055534
-				},{
+				}, {
 					title: "Albuquerque 4",
 					subTitle: "Albuquerque 4...",
 					linkContent: "<a href='http://www.google.com'>My Link</a>",
 					lat: 35.0853336,
 					lon: -106.6055534
-				},{
+				}, {
 					title: "Albuquerque 4",
 					subTitle: "Albuquerque 4...",
 					linkContent: "<a href='http://www.google.com'>My Link</a>",
 					lat: 35.0853336,
 					lon: -106.6055534
-				},{
+				}, {
 					title: "Albuquerque 4",
 					subTitle: "Albuquerque 4...",
 					linkContent: "<a href='http://www.google.com'>My Link</a>",
 					lat: 35.0853336,
 					lon: -106.6055534
-				},{
+				}, {
 					title: "Albuquerque 4",
 					subTitle: "Albuquerque 4...",
 					linkContent: "<a href='http://www.google.com'>My Link</a>",
 					lat: 35.0853336,
 					lon: -106.6055534
-				},{
+				}, {
 					title: "Albuquerque 4",
 					subTitle: "Albuquerque 4...",
 					linkContent: "<a href='http://www.google.com'>My Link</a>",
 					lat: 35.0853336,
 					lon: -106.6055534
-				},{
+				}, {
 					title: "Albuquerque 4",
 					subTitle: "Albuquerque 4...",
 					linkContent: "<a href='http://www.google.com'>My Link</a>",
 					lat: 35.0853336,
 					lon: -106.6055534
-				},{
+				}, {
 					title: "Albuquerque 4",
 					subTitle: "Albuquerque 4...",
 					linkContent: "<a href='http://www.google.com'>My Link</a>",
 					lat: 35.0853336,
 					lon: -106.6055534
-				},{
+				}, {
 					title: "Albuquerque 4",
 					subTitle: "Albuquerque 4...",
 					linkContent: "<a href='http://www.google.com'>My Link</a>",
 					lat: 35.0853336,
 					lon: -106.6055534
-				},{
+				}, {
 					title: "Albuquerque 4",
 					subTitle: "Albuquerque 4...",
 					linkContent: "<a href='http://www.google.com'>My Link</a>",
 					lat: 35.0853336,
 					lon: -106.6055534
-				},{
+				}, {
 					title: "Albuquerque 4",
 					subTitle: "Albuquerque 4...",
 					linkContent: "<a href='http://www.google.com'>My Link</a>",
 					lat: 35.0853336,
 					lon: -106.6055534
-				},{
+				}, {
 					title: "Albuquerque 4",
 					subTitle: "Albuquerque 4...",
 					linkContent: "<a href='http://www.google.com'>My Link</a>",
 					lat: 35.0853336,
 					lon: -106.6055534
-				},{
+				}, {
 					title: "Albuquerque 4",
 					subTitle: "Albuquerque 4...",
 					linkContent: "<a href='http://www.google.com'>My Link</a>",
 					lat: 35.0853336,
 					lon: -106.6055534
-				},{
+				}, {
 					title: "Albuquerque 4",
 					subTitle: "Albuquerque 4...",
 					linkContent: "<a href='http://www.google.com'>My Link</a>",
 					lat: 35.0853336,
 					lon: -106.6055534
-				},{
+				}, {
 					title: "Albuquerque 4",
 					subTitle: "Albuquerque 4...",
 					linkContent: "<a href='http://www.google.com'>My Link</a>",

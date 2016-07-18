@@ -142,7 +142,7 @@
                             });
                             var latLng = new google.maps.LatLng(m.lat, m.lon);
                             //fix lat/lon for pins on same exact postion
-                            if (clusterMarkers.length != 0) {
+                            if (scope.config.fixOverlappingPins && clusterMarkers.length != 0) {
                                 for (var i = 0; i < clusterMarkers.length; i++) {
                                     var existingMarker = clusterMarkers[i];
                                     var pos = existingMarker.getPosition();
