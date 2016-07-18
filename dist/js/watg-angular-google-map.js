@@ -125,6 +125,7 @@
                     removeAllMarkers();
                     console.log("config.clusterMarkers collection changed...");
                     if (scope.config.clusterMarkers.length > 0) {
+                        var counter = 1;
                         scope.config.clusterMarkers.forEach(function(m) {
                             var contentString = "<div>";
                             contentString += "<div style='float:left;margin-right:5px;'>";
@@ -142,7 +143,7 @@
                             });
                             var latLng = new google.maps.LatLng(m.lat, m.lon);
                             //fix lat/lon for pins on same exact postion
-                            if (scope.config.fixOverlappingPins && clusterMarkers.length != 0) {
+                            if (scope.config.fixOverlappingPins) {
                                 for (var i = 0; i < clusterMarkers.length; i++) {
                                     var existingMarker = clusterMarkers[i];
                                     var pos = existingMarker.getPosition();
@@ -166,6 +167,8 @@
                                 markerInfowindow.open(map, marker);
                             });
                             clusterMarkers.push(marker);
+                            counter++;
+                            console.log("Processed %s out of %s", counter, scope.config.clusterMarkers.length);
                         });
                         var options = {
                             imagePath: 'https://raw.githubusercontent.com/googlemaps/js-marker-clusterer/gh-pages/images/m',
