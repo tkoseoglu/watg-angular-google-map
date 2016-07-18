@@ -25,6 +25,12 @@
             var clusterMarkers = [];
             var randomMin = -0.05;
             var randomMax = 0.05;
+            var options = {
+                imagePath: 'https://raw.githubusercontent.com/googlemaps/js-marker-clusterer/gh-pages/images/m',
+                gridSize: scope.config.clusterGridSize,
+                styles: scope.config.clusterStyles
+            };
+            var markerClusterer;
 
             function handleLocationError(browserHasGeolocation, infoWindow, pos) {
                 infoWindow.setPosition(pos);
@@ -39,6 +45,7 @@
                     clusterMarkers[ii].setMap(null);
                 }
                 clusterMarkers = [];
+                if (markerClusterer !== undefined) markerClusterer.clearMarkers();
                 console.log("all markers removed");
             }
 
@@ -170,13 +177,8 @@
                             counter++;
                             console.log("Processed %s out of %s", counter, scope.config.clusterMarkers.length);
                         });
-                        var options = {
-                            imagePath: 'https://raw.githubusercontent.com/googlemaps/js-marker-clusterer/gh-pages/images/m',
-                            gridSize: scope.config.clusterGridSize,
-                            styles: scope.config.clusterStyles
-                        };
-                        var markerCluster = new MarkerClusterer(map, clusterMarkers, options);
                     }
+                    markerClusterer = new MarkerClusterer(map, clusterMarkers, options);
                 });
             }
             initMap();
