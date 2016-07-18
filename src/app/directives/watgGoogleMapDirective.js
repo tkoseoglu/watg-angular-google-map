@@ -17,10 +17,21 @@
         function link(scope, element) {
             var map;
             var infowindow;
-
+            var clusterMarkers = [];
             function handleLocationError(browserHasGeolocation, infoWindow, pos) {
                 infoWindow.setPosition(pos);
                 infoWindow.setContent(browserHasGeolocation ? 'Error: The Geolocation service failed.' : 'Error: Your browser doesn\'t support geolocation.');
+            }
+
+            function removeAllMarkers() {
+                for (var i = 0; i < scope.config.markers.length; i++) {
+                    scope.config.markers[i].setMap(null);
+                }
+                for (var ii = 0; ii < clusterMarkers.length; ii++) {
+                    clusterMarkers[ii].setMap(null);
+                }
+                clusterMarkers=[];
+                console.log("all markers removed");
             }
 
             function initMap() {
@@ -67,10 +78,9 @@
                     });
                 }
                 scope.$watchCollection('config.markers', function(newValue, oldValue) {
-                    //markers
+                    removeAllMarkers();
                     console.log("config.markers collection changed...");
                     if (scope.config.markers.length > 0) {
-                        console.log(newValue);
                         scope.config.markers.forEach(function(m) {
                             var contentString = "<div>";
                             contentString += "<div style='float:left;margin-right:5px;'>";
@@ -99,10 +109,9 @@
                     }
                 });
                 scope.$watchCollection('config.clusterMarkers', function(newValue, oldValue) {
-                    //markers
+                    removeAllMarkers();
                     console.log("config.clusterMarkers collection changed...");
                     if (scope.config.clusterMarkers.length > 0) {
-                        var clusterMarkers = [];
                         scope.config.clusterMarkers.forEach(function(m) {
                             var contentString = "<div>";
                             contentString += "<div style='float:left;margin-right:5px;'>";

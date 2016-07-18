@@ -51,10 +51,21 @@
         function link(scope, element) {
             var map;
             var infowindow;
-
+            var clusterMarkers = [];
             function handleLocationError(browserHasGeolocation, infoWindow, pos) {
                 infoWindow.setPosition(pos);
                 infoWindow.setContent(browserHasGeolocation ? 'Error: The Geolocation service failed.' : 'Error: Your browser doesn\'t support geolocation.');
+            }
+
+            function removeAllMarkers() {
+                for (var i = 0; i < scope.config.markers.length; i++) {
+                    scope.config.markers[i].setMap(null);
+                }
+                for (var ii = 0; ii < clusterMarkers.length; ii++) {
+                    clusterMarkers[ii].setMap(null);
+                }
+                clusterMarkers=[];
+                console.log("all markers removed");
             }
 
             function initMap() {
@@ -73,8 +84,6 @@
                     map.setMapTypeId(scope.selectedMapTypeId);
                 }
                 //custom controls
-
-
                 //show my location
                 if (scope.config.showMyLocation) {
                     if (navigator.geolocation) {
@@ -96,15 +105,16 @@
                     }
                 }
                 //overlay
-                new DayNightOverlay({
-                    map: map,
-                    fillColor: scope.config.dayNightOverlayFillColor || 'rgba(0,0,0,0.3)'
-                });
+                if (scope.config.showDayNightOverlay) {
+                    new DayNightOverlay({
+                        map: map,
+                        fillColor: scope.config.dayNightOverlayFillColor || 'rgba(0,0,0,0.3)'
+                    });
+                }
                 scope.$watchCollection('config.markers', function(newValue, oldValue) {
-                    //markers
+                    removeAllMarkers();
                     console.log("config.markers collection changed...");
                     if (scope.config.markers.length > 0) {
-                        console.log(newValue);
                         scope.config.markers.forEach(function(m) {
                             var contentString = "<div>";
                             contentString += "<div style='float:left;margin-right:5px;'>";
@@ -133,10 +143,9 @@
                     }
                 });
                 scope.$watchCollection('config.clusterMarkers', function(newValue, oldValue) {
-                    //markers
+                    removeAllMarkers();
                     console.log("config.clusterMarkers collection changed...");
                     if (scope.config.clusterMarkers.length > 0) {
-                        var clusterMarkers = [];
                         scope.config.clusterMarkers.forEach(function(m) {
                             var contentString = "<div>";
                             contentString += "<div style='float:left;margin-right:5px;'>";
@@ -235,6 +244,7 @@
 			fullscreenControl: true,
 			disableAutoPan: false,
 			shadowStyle: 1,
+			showDayNightOverlay: true,
 			dayNightOverlayFillColor: 'rgba(0,0,0,0.1)',
 			clusterMarkers: [{
 					title: "Santa Fe",
@@ -260,7 +270,7 @@
 					linkContent: "<a href='http://www.google.com'>My Link</a>",
 					lat: 35.0853336,
 					lon: -106.6055534
-				},{
+				}, {
 					title: "Albuquerque 4",
 					subTitle: "Albuquerque 4...",
 					linkContent: "<a href='http://www.google.com'>My Link</a>",
