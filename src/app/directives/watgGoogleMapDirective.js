@@ -38,6 +38,9 @@
                     map.mapTypes.set(scope.selectedMapTypeId, scope.config.customMapTypes[0]);
                     map.setMapTypeId(scope.selectedMapTypeId);
                 }
+                //custom controls
+
+
                 //show my location
                 if (scope.config.showMyLocation) {
                     if (navigator.geolocation) {
@@ -115,10 +118,25 @@
                             var markerInfowindow = new google.maps.InfoWindow({
                                 content: contentString
                             });
+                            var latLng = new google.maps.LatLng(m.lat, m.lon);
+                            //fix lat/lon for pins on same exact postion
+                            if (clusterMarkers.length != 0) {
+                                for (var i = 0; i < clusterMarkers.length; i++) {
+                                    var existingMarker = clusterMarkers[i];
+                                    var pos = existingMarker.getPosition();
+                                    if (latLng.equals(pos)) {
+                                        var a = 360.0 / clusterMarkers.length;
+                                        var newLat = pos.lat() + -.0004 * Math.cos((+a * i) / 180 * Math.PI); //x
+                                        var newLng = pos.lng() + -.0004 * Math.sin((+a * i) / 180 * Math.PI); //Y
+                                        latLng = new google.maps.LatLng(newLat, newLng);
+                                    }
+                                }
+                            }
                             var marker = new google.maps.Marker({
-                                position: { lat: m.lat, lng: m.lon },
+                                position: latLng,
                                 title: m.title,
-                                icon: scope.config.customMarkerUrl
+                                icon: scope.config.customMarkerUrl,
+                                textColor: "white"
                             });
                             marker.addListener('click', function() {
                                 markerInfowindow.open(map, marker);
@@ -127,7 +145,8 @@
                         });
                         var options = {
                             imagePath: 'https://raw.githubusercontent.com/googlemaps/js-marker-clusterer/gh-pages/images/m',
-                            gridSize: scope.config.clusterGridSize
+                            gridSize: scope.config.clusterGridSize,
+                            styles: scope.config.clusterStyles
                         };
                         var markerCluster = new MarkerClusterer(map, clusterMarkers, options);
                     }

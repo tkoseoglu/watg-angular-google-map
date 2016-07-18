@@ -376,19 +376,19 @@
 	"buffers":
 	[
 		{
-			"file": "src/app/directives/watgGoogleMapDirective.js",
+			"file": "gruntfile.js",
 			"settings":
 			{
-				"buffer_size": 7083,
+				"buffer_size": 5702,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "src/app/tests/testController.js",
+			"file": "package.json",
 			"settings":
 			{
-				"buffer_size": 4615,
-				"line_ending": "Windows"
+				"buffer_size": 739,
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -503,28 +503,30 @@
 	[
 		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map",
 		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/src",
-		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/src/assets",
-		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/src/assets/images"
+		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/src/app",
+		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/src/app/core",
+		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/src/app/directives",
+		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/src/app/tests"
 	],
 	"file_history":
 	[
+		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/src/app/directives/watgGoogleMapDirective.js",
+		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/src/app/core/app.config.js",
+		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/src/app/app.js",
+		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/src/app/tests/testController.js",
 		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/junk.html",
 		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/src/app/data.json",
 		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/src/app/tests/testView.html",
 		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/index.html",
-		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/src/app/directives/watgGoogleMapDirective.js",
 		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/gruntfile.js",
 		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/bower.json",
 		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/bower_components/google-markercluster/markercluster.js",
-		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/src/app/tests/testController.js",
-		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/src/app/app.js",
 		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/dev/css/watg-angular-autocomplete.min.css",
 		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/package.json",
 		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/dev/js/watg-angular-autocomplete.js",
 		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/dev/js/watg-angular-autocomplete.min.js",
 		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/dist/js/watg-angular-autocomplete.js",
 		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/dist/js/watg-angular-autocomplete.min.js",
-		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/src/app/core/app.config.js",
 		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/src/app/appDist.js",
 		"/D/Tolga/Code/DEV/ngSprites/app/ngGoogleMaps/ngGoogleMapsView.html",
 		"/D/Tolga/Code/DEV/ngSprites/app/ngGoogleMaps/ngGoogleMapsController.js",
@@ -806,19 +808,19 @@
 			[
 				{
 					"buffer": 0,
-					"file": "src/app/directives/watgGoogleMapDirective.js",
+					"file": "gruntfile.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 7083,
+						"buffer_size": 5702,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								6394,
-								6409
+								5511,
+								5525
 							]
 						],
 						"settings":
@@ -827,8 +829,8 @@
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 9.0,
-						"translation.y": 1976.0,
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -836,28 +838,29 @@
 				},
 				{
 					"buffer": 1,
-					"file": "src/app/tests/testController.js",
-					"semi_transient": false,
+					"file": "package.json",
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 4615,
+						"buffer_size": 739,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1072,
-								1072
+								488,
+								522
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 319.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
