@@ -39,8 +39,6 @@
                     map.setMapTypeId(scope.selectedMapTypeId);
                 }
                 //custom controls
-
-
                 //show my location
                 if (scope.config.showMyLocation) {
                     if (navigator.geolocation) {
@@ -62,10 +60,12 @@
                     }
                 }
                 //overlay
-                new DayNightOverlay({
-                    map: map,
-                    fillColor: scope.config.dayNightOverlayFillColor || 'rgba(0,0,0,0.3)'
-                });
+                if (scope.config.showDayNightOverlay) {
+                    new DayNightOverlay({
+                        map: map,
+                        fillColor: scope.config.dayNightOverlayFillColor || 'rgba(0,0,0,0.3)'
+                    });
+                }
                 scope.$watchCollection('config.markers', function(newValue, oldValue) {
                     //markers
                     console.log("config.markers collection changed...");
