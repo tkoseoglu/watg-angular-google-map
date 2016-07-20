@@ -376,19 +376,19 @@
 	"buffers":
 	[
 		{
-			"file": "gruntfile.js",
+			"file": "src/app/directives/watgGoogleMapDirective.js",
 			"settings":
 			{
-				"buffer_size": 5702,
+				"buffer_size": 9505,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "package.json",
+			"file": "src/app/tests/testView.html",
 			"settings":
 			{
-				"buffer_size": 739,
-				"line_ending": "Unix"
+				"buffer_size": 205,
+				"line_ending": "Windows"
 			}
 		}
 	],
@@ -502,23 +502,27 @@
 	"expanded_folders":
 	[
 		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map",
+		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/dist",
 		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/src",
 		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/src/app",
-		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/src/app/core",
 		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/src/app/directives",
 		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/src/app/tests"
 	],
 	"file_history":
 	[
+		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/src/app/tests/testController.js",
+		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/src/assets/locations.js",
 		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/src/app/directives/watgGoogleMapDirective.js",
+		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/src/assets/markers.json",
+		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/dev/js/watg-angular-google-map.js",
+		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/dev/js/watg-angular-google-map.min.js",
+		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/src/app/tests/testView.html",
+		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/gruntfile.js",
 		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/src/app/core/app.config.js",
 		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/src/app/app.js",
-		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/src/app/tests/testController.js",
 		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/junk.html",
 		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/src/app/data.json",
-		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/src/app/tests/testView.html",
 		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/index.html",
-		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/gruntfile.js",
 		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/bower.json",
 		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/bower_components/google-markercluster/markercluster.js",
 		"/D/Tolga/Code/WATG/WATG GitHub/watg-angular-google-map/dev/css/watg-angular-autocomplete.min.css",
@@ -633,21 +637,21 @@
 		"/D/Tolga/Code/LATA/METRA/Schedule Manager/meanstack/Gruntfile.js",
 		"/D/Tolga/Code/LATA/METRA/Schedule Manager/meanstack/public/app/views/scheduleManagerView.html",
 		"/D/Tolga/Code/LATA/METRA/Schedule Manager/meanstack/public/css/scheduleManager.less",
-		"/D/Tolga/Code/LATA/METRA/Schedule Manager/meanstack/public/app/services/adaTypesService.js",
-		"/D/Tolga/Code/LATA/METRA/Schedule Manager/meanstack/public/app/services/agenciesService.js",
-		"/D/Tolga/Code/LATA/METRA/Schedule Manager/meanstack/public/app/services/fareZonesService.js",
-		"/D/Tolga/Code/LATA/METRA/Schedule Manager/meanstack/public/app/services/groupService.js",
-		"/D/Tolga/Code/LATA/METRA/Schedule Manager/meanstack/public/app/services/moduleService.js"
+		"/D/Tolga/Code/LATA/METRA/Schedule Manager/meanstack/public/app/services/adaTypesService.js"
 	],
 	"find":
 	{
-		"height": 35.0
+		"height": 36.0
 	},
 	"find_in_files":
 	{
 		"height": 220.0,
 		"where_history":
 		[
+			"locations.js",
+			"testController.js",
+			"testController.js`",
+			"testController.js",
 			""
 		]
 	},
@@ -656,6 +660,15 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"lon",
+			"lat",
+			"linkContent",
+			"sub\"title\"",
+			"title",
+			"Albuquerque",
+			"-106.6055534",
+			"35.0853336",
+			"35.6869752",
 			"config",
 			"watg-angular-autocomplete",
 			"getVoter",
@@ -774,16 +787,7 @@
 			"smScheduleEditorTripsContainer",
 			"stopsContainerWidth",
 			"availableHeight",
-			"availableTripContainerWidth",
-			"stopTimeEditWidth",
-			"stopTimeEditHeight",
-			"tripEditWidth",
-			"tripEditHeight",
-			"stopTimeWidth",
-			"totalTripsWidth",
-			"totalWidth",
-			"availableWidth",
-			"availableHeight"
+			"availableTripContainerWidth"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -791,6 +795,14 @@
 		"regex": false,
 		"replace_history":
 		[
+			"\"lon\"",
+			"\"lat\"",
+			"\"linkContent\"",
+			"\"subTitle\"",
+			"\"title\"",
+			"Dubai",
+			"55.2707828",
+			"25.2048493",
 			"watg-angular-google-map",
 			"$scope.openShells"
 		],
@@ -803,24 +815,24 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "gruntfile.js",
+					"file": "src/app/directives/watgGoogleMapDirective.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5702,
+						"buffer_size": 9505,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								5511,
-								5525
+								8022,
+								8022
 							]
 						],
 						"settings":
@@ -833,37 +845,36 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "package.json",
+					"file": "src/app/tests/testView.html",
 					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 739,
+						"buffer_size": 205,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								488,
-								522
+								9,
+								29
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"is_xml": false,
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]

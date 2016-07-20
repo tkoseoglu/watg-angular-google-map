@@ -34,14 +34,18 @@
 
             function removeAllMarkers() {
                 for (var i = 0; i < scope.config.markers.length; i++) {
-                    scope.config.markers[i].setMap(null);
+                    scope.config.markers[i].map = null;
                 }
-                for (var ii = 0; ii < clusterMarkers.length; ii++) {
-                    clusterMarkers[ii].setMap(null);
+                console.log("all markers removed");
+            }
+
+            function removeAllClusterMarkers() {
+                for (var i = 0; i < clusterMarkers.length; i++) {
+                    clusterMarkers[i].setMap(null);
                 }
                 clusterMarkers = [];
                 if (markerClusterer !== undefined) markerClusterer.clearMarkers();
-                console.log("all markers removed");
+                console.log("all cluster markers removed");
             }
 
             function getRandomNumber(min, max) {
@@ -124,10 +128,10 @@
                     }
                 });
                 scope.$watchCollection('config.clusterMarkers', function(newValue, oldValue) {
-                    removeAllMarkers();
+                    removeAllClusterMarkers();
                     console.log("config.clusterMarkers collection changed...");
                     if (scope.config.clusterMarkers.length > 0) {
-                        var counter = 1;
+                        var counter = 0;
                         scope.config.clusterMarkers.forEach(function(m) {
                             var contentString = "<div>";
                             contentString += "<div style='float:left;margin-right:5px;'>";
@@ -176,6 +180,7 @@
                     markerClusterer = new MarkerClusterer(map, clusterMarkers, options);
                 });
             }
+
             initMap();
         }
     }
