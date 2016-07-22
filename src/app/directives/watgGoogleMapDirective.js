@@ -1,8 +1,8 @@
 (function() {
     "use strict";
-    angular.module("watgGoogleMapModule").directive("watgGoogleMap", watgGoogleMapDirective);
+    angular.module("watgGoogleMapModule").directive("watgGoogleMap", ["$http", watgGoogleMapDirective]);
 
-    function watgGoogleMapDirective() {
+    function watgGoogleMapDirective($http) {
         return {
             restrict: "E",
             template: "<div id='map' class='watgAngularGoogleMap'></div>",
@@ -16,6 +16,7 @@
 
         function link(scope, element) {
             var map;
+            var mapElement;
             var infowindow;
             var clusterMarkers = [];
             var randomMin = -0.05;
@@ -54,7 +55,8 @@
             }
 
             function initMap() {
-                map = new google.maps.Map(document.getElementById('map'), {
+                mapElement = document.getElementById('map');
+                map = new google.maps.Map(mapElement, {
                     center: { lat: scope.config.lat, lng: scope.config.lon },
                     zoom: scope.config.zoom,
                     disableDefaultUI: scope.config.disableDefaultUI,
@@ -68,7 +70,8 @@
                     map.mapTypes.set(scope.selectedMapTypeId, scope.config.customMapTypes[0]);
                     map.setMapTypeId(scope.selectedMapTypeId);
                 }
-                //custom controls
+                //resize
+                google.maps.event.trigger(map, 'resize');
                 //show my location
                 if (scope.config.showMyLocation) {
                     if (navigator.geolocation) {
@@ -101,20 +104,8 @@
                     console.log("config.markers collection changed...");
                     if (scope.config.markers.length > 0) {
                         scope.config.markers.forEach(function(m) {
-                            var contentString = "<div>";
-                            contentString += "<div style='float:left;margin-right:5px;'>";
-                            if (m.imgSrc) {
-                                contentString += "<img src='" + m.imgSrc + "' style='height:100px'/></div>";
-                            }
-                            contentString += "<div style='float:right;margin-left:5px;'>";
-                            contentString += '<div><b>' + m.title + '</b></div>';
-                            contentString += '<div>' + m.subTitle + '</div>';
-                            contentString += '<div>' + m.linkContent + '</div>';
-                            contentString + '</div>';
-                            contentString + '</div>';
-                            var markerInfowindow = new google.maps.InfoWindow({
-                                content: contentString
-                            });
+                            var contentUrl = m.contentUrl;
+                            var markerInfowindow = new google.maps.InfoWindow();
                             var marker = new google.maps.Marker({
                                 position: { lat: m.lat, lng: m.lon },
                                 map: map,
@@ -123,6 +114,9 @@
                             });
                             marker.addListener('click', function() {
                                 markerInfowindow.open(map, marker);
+                                getInfoWindowContent(contentUrl).then(function(result) {
+                                    markerInfowindow.setContent(result);
+                                });
                             });
                         });
                     }
@@ -133,20 +127,6 @@
                     if (scope.config.clusterMarkers.length > 0) {
                         var counter = 0;
                         scope.config.clusterMarkers.forEach(function(m) {
-                            var contentString = "<div>";
-                            contentString += "<div style='float:left;margin-right:5px;'>";
-                            if (m.imgSrc) {
-                                contentString += "<img src='" + m.imgSrc + "' style='height:100px'/></div>";
-                            }
-                            contentString += "<div style='float:right;margin-left:5px;'>";
-                            contentString += '<div><b>' + m.title + '</b></div>';
-                            contentString += '<div>' + m.subTitle + '</div>';
-                            contentString += '<div>' + m.linkContent + '</div>';
-                            contentString += '</div>';
-                            contentString += '</div>';
-                            var markerInfowindow = new google.maps.InfoWindow({
-                                content: contentString
-                            });
                             var latLng = new google.maps.LatLng(m.lat, m.lon);
                             //fix lat/lon for pins on same exact postion
                             if (scope.config.fixOverlappingPins) {
@@ -169,18 +149,47 @@
                                 icon: scope.config.customMarkerUrl,
                                 textColor: "white"
                             });
+                            var contentUrl = m.contentUrl;
+                            var markerInfowindow = new google.maps.InfoWindow();
                             marker.addListener('click', function() {
                                 markerInfowindow.open(map, marker);
+                                getInfoWindowContent(contentUrl).then(function(result) {
+                                    markerInfowindow.setContent(result);
+                                });
                             });
                             clusterMarkers.push(marker);
                             counter++;
-                            console.log("Processed %s out of %s", counter, scope.config.clusterMarkers.length);
                         });
                     }
                     markerClusterer = new MarkerClusterer(map, clusterMarkers, options);
                 });
+                scope.$watch('config.mapHeight', function(newValue, oldValue) {
+                    if (newValue !== "" && newValue !== oldValue) {
+                        console.log("Config height change to %s", newValue);
+                        $("#map").height(newValue + 'px');
+                        google.maps.event.trigger(map, 'resize');
+                    }
+                });
+                scope.$watch('config.mapWidth', function(newValue, oldValue) {
+                    if (newValue !== "" && newValue !== oldValue) {
+                        console.log("Config width change to %s", newValue);
+                        //$("#map").width(newValue + 'px');
+                        google.maps.event.trigger(map, 'resize');
+                    }
+                });
             }
 
+            function getInfoWindowContent(url) {
+                console.log("Getting content from %s", url)
+                return $http({
+                    method: 'GET',
+                    withCredentials: true,
+                    url: url
+                }).
+                then(function(response) {
+                    return response.data;
+                });
+            }
             initMap();
         }
     }

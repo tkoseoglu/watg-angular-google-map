@@ -58,7 +58,7 @@
             	}],
 			markers: []
 		};
-		$http.get('../src/assets/locations.js').success(function(response) {
+		$http.get('../src/assets/locations2.js').success(function(response) {
 			console.log(response);
 			$scope.mapConfig.clusterMarkers = response;
 		});
